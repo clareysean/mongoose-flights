@@ -60,15 +60,12 @@ npm start
 - Mongoose: MongoDB object modeling for Node.js
 - HTML, CSS, JavaScript: Front-end development
 
-## Contributing
+## Contributions
 
-Contributions are welcome! Feel free to open an issue or submit a pull request for any enhancements or bug fixes.
+Feel free to customize the content as per your app's requirements. 
+If you have any improvements or fixes that you'd like to contribute, submit a pull request with your changes; include a clear description of the problem you're addressing and the proposed solution.
 
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-## Contributions
-
-Feel free to customize the content as per your app's requirements. 
-If you have any improvements or fixes that you'd like to contribute, submit a pull request with your changes; include a clear description of the problem you're addressing and the proposed solution.
