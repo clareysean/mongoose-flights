@@ -2,7 +2,7 @@ body {
   background-color: #eefdff;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
 }
@@ -12,12 +12,6 @@ h1 {
   color: #464455;
   margin: 40px 0;
   font-size: 8vmin;
-}
-
-.svg-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 nav {
@@ -49,7 +43,8 @@ svg {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 table tbody tr:nth-child(even) {
