@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+<h1>All Flights</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>Flight Number</th>
+        <th>Departs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% flights.forEach(function (flight) { %>
+        <% let currentDate = new Date(); %>
+        <% let flightDate = new Date(flight.departs); %>
+        <% let isFlightPassed = flightDate < currentDate; console.log(isFlightPassed) %>
+        <tr class="<%= isFlightPassed ? 'flight-passed' : '' %>">
+          <td><%= flight.airline %></td>
+          <td><%= flight.airport %></td>
+          <td><%= flight.flightNumber %></td>
+          <td><%= flight.departs.toISOString().slice(0, 16).replace('T', ' ') %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

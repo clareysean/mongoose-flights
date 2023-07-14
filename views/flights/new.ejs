@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+<h2>Enter Your Flight Details</h2>
+<form action="/flights" method="POST">
+  <label>
+    Airline:<br />
+    <select name="airline">
+      <option value="Air Canada">Air Canada</option>
+      <option value="Delta">Delta</option>
+      <option value="Ryan Air">Ryan Air</option>
+      <option value="United">United</option>
+      <option value="Southwest">Southwest</option>
+    </select>
+  </label><br />
+  <label>
+    Airport:<br />
+    <select name="airport">
+      <option value="YYZ">YYZ</option>
+      <option value="YUL">YUL</option>
+      <option value="AUS">AUS</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+    </select>
+  </label><br />
+  <label>
+    Flight Number:<br />
+    <input type="number" pattern="^\d{2,4}$" name="flightNumber" />
+  </label><br />
+  <label>
+    Departure Date:<br />
+    <input type="datetime-local" value="<%= %>" name="departs" />
+  </label><br />
+  <button type="submit">Add Flight</button>
+</form>
+<p><%= errorMsg %></p>
+
+
+<%- include('../partials/footer') %>
