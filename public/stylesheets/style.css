@@ -87,7 +87,7 @@ label {
 select,
 input[type="number"],
 input[type="datetime-local"] {
-  margin-top: 5px;
+  margin-top: 2vmin;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -104,11 +104,25 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover, .submit-destination-btn:hover{
   background-color: #45a049;
 }
 
 p {
   color: red;
   margin-top: 10px;
+}
+
+.submit-destination-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.date-time-destination{
+  margin-top: 2vmin;
 }

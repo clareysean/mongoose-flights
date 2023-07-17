@@ -1,25 +1,24 @@
 const Flight = require('../models/flight')
-
+const Airport = require('../models/airport');
 module.exports = {
     index,
     new: newFlight,
-    create
+    create,
+    show
 }
 
 async function index(req, res) {
     const flights = await Flight.find().sort({ departs: 1 }).exec();
-    console.log(flights);
     try{
         res.render("flights/index", { errorMsg: '', flights: flights });
        }
        catch (err) {
-        console.log(err);
         res.render('flights/new', { errorMsg: err.message });
       }
   }
   
 
-function newFlight(req,res){
+async function newFlight(req,res){
      const newFlight = new Flight();
 // Obtain the default date
      const dt = newFlight.departs;
@@ -33,13 +32,16 @@ function newFlight(req,res){
 async function create(req, res) {
     try {
       await Flight.create(req.body);
-      console.log(req.body)
       res.redirect("/flights");
     } catch (err) {
-      console.log(err);
       res.render("flights/new", { errorMsg: err.message });
     }
   }
-  
-  
+
+  async function show(req, res){
+    const flightToShow = await Flight.findById(req.params.id);
+    const codesDoc = await Airport.findOne();
+    const allCodes = codesDoc.airportCodes;
+    res.render("flights/show", { flight: flightToShow, allCodes })
+  }
   

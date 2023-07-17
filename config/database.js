@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_URL);
 
 // shortcut to mongoose.connection object
+mongoose.set('debug', true);
 
 const db = mongoose.connection;
 
