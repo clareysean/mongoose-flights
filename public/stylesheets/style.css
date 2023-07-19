@@ -104,7 +104,7 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover, .submit-destination-btn:hover{
+button[type="submit"]:hover, .submit-destination-btn:hover, .ticket-submit-btn:hover{
   background-color: #45a049;
 }
 
@@ -113,15 +113,21 @@ p {
   margin-top: 10px;
 }
 
-.submit-destination-btn {
+.submit-destination-btn, .ticket-submit-btn {
+  display: block;
+  margin: 0 auto;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 18vw;
 }
 
+.ticket-submit-btn {
+  width: 14vw;
+}
 
 .date-time-destination{
   margin-top: 2vmin;

@@ -42,7 +42,29 @@
          <% } )%></td>
           </tr>
       </tbody>
-</table>
+</table><br><br>
+<%if(tickets.length){%>
+<h2>Tickets</h2>
+
+<table>
+  <thead>
+      <tr>
+        <th>Seat</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tickets.forEach((t) => { console.log(t)%>
+   <tr>
+    <td><%= t.seat %></td>
+    <td><%= t.price %></td>
+   </tr>
+  <%});%>
+    </tbody>
+</table><br><br>
+<%}%>
+
+<a class="ticket-submit-btn" href="/tickets/<%= flight._id %>/new">New Ticket</a>  
 
 <br><br>
 <h2>Edit Itinerary</h2>
@@ -67,7 +89,7 @@
   </select>
   <label class="date-time-destination">Date/Time: <br>
     <input type="datetime-local" value="<%= new Date(); %>" name="arrival" />
-  </label>
+  </label><br>
   <input class="submit-destination-btn" type="submit" value="Add Destination">
 </form>
 
