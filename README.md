@@ -18,8 +18,8 @@ This is a flight management app built with Express, Express Generator, and Mongo
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/your-username/flight-management-app.git
-cd flight-management-app
+git clone https://github.com/clareysean/mongoose-flights.git
+cd mongoose-flights
 ```
 
 2. Install the dependencies:
@@ -68,4 +68,3 @@ If you have any improvements or fixes that you'd like to contribute, submit a pu
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
