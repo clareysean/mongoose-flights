@@ -126,7 +126,13 @@ p {
 }
 
 .ticket-submit-btn {
-  width: 14vw;
+  width: 15.5vw;
+  height: 1.7vmin;
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date-time-destination{
