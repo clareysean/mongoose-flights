@@ -14,10 +14,7 @@ async function create(req, res) {
   try {
     const flightId = req.params.id;
     
-    const ticketData = { ...req.body, flight: flightId };
-    await Ticket.create(ticketData);
-    
-    const tickets = await Ticket.find({ flight: flightId }).exec();
+    await Ticket.create({ ...req.body, flight: flightId });
 
     res.redirect(`/flights/${flightId}`);
   } catch (err) {
